@@ -1,0 +1,25 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=dev nodemon --exec babel-node src/index.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cross-env": "^5.1.3",
+    "express": "^4.16.2",
+    "mongoose": "^4.13.9"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.15.0",
+    "eslint-config-equimper": "^2.2.1",
+    "eslint-config-prettier": "^2.9.0",
+    "nodemon": "^1.14.9",
+    "prettier": "^1.9.2"
+  }
+}
