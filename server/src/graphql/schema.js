@@ -8,8 +8,8 @@ export default`
     type Tweet {
         _id: ID!
         text: String!
-        createdAt: String!
-        updatedAt: String!
+        createdAt: Date!
+        updatedAt: Date!
     }
 
     type Query {
