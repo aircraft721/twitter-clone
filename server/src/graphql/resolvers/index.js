@@ -6,7 +6,8 @@ export default {
         getTweets: TweetResolvers.getTweets
     },
     Mutation: {
-        createTweet: TweetResolvers.createTweet
+        createTweet: TweetResolvers.createTweet,
+        updateTweet: TweetResolvers.updateTweet
     }
 
 }

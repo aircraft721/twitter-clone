@@ -11,6 +11,7 @@ export default`
 
     type Mutation {
         createTweet(text: String!): Tweet
+        updateTweet(_id: ID!, text: String, email: String): Tweet
     }
 
     schema {
