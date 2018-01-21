@@ -32,6 +32,8 @@ export default`
     type Tweet {
         _id: ID!
         text: String!
+        user: User!
+        favoriteCount: Int!
         createdAt: Date!
         updatedAt: Date!
     }
@@ -39,6 +41,7 @@ export default`
     type Query {
         getTweet(_id: ID!): Tweet
         getTweets: [Tweet]
+        getUserTweets: [Tweet]
         me: Me
     }
 
