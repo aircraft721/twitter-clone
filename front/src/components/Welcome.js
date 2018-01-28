@@ -20,7 +20,7 @@ const Text = styled.Text`
 export default function Welcome() {
   return (
     <Root>
-      <Text>ssss</Text>
+      <Text>eeee</Text>
     </Root>
   )
 }
