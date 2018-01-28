@@ -1,14 +1,25 @@
 import React, { Component } from 'react';
 import styled from 'styled-components/native';
-import { SimpleLineIcons } from '@expo/vector-icons';
- 
+import FontAwesome, { Icons } from 'react-native-fontawesome';
+import Touchable from '@appandflow/touchable';
+
+import { colors } from '../../utils/constants';
+
+const ICON_SIZE = 20;
+
 const Root = styled.View`
     height: 40;
     flexDirection: row;
 `;  
 
-const Button = styled.View`
+const Button = styled(Touchable).attrs({
+    feedback: 'opacity'
+})`
     flex: 1;
+    alignItems: center;
+    alignItems: center;
+    justifyContent: space-around;
+    paddingHorizontal: 32px;s
 `;
 
 const ButtonText = styled.Text`
@@ -17,23 +28,29 @@ const ButtonText = styled.Text`
     color: ${props => props.theme.LIGHT_GRAY};
 `;
 
+const favoriteCount = 3;
+const isFavorited = false;
+
+
 const FeedCardBottom = () => {
     return (
         <Root>
             <Button>
-                <SimpleLineIcons name='bubble'/>
+                <FontAwesome style={{fontSize: ICON_SIZE}}>{Icons.commentO}</FontAwesome>
                 <ButtonText>
-                    3
+                    {favoriteCount}
                 </ButtonText>
             </Button>
             <Button>
+                <FontAwesome style={{fontSize: ICON_SIZE}}>{Icons.retweet}</FontAwesome>
                 <ButtonText>
-                    3
+                    {favoriteCount}
                 </ButtonText>
             </Button>
             <Button>
+                <FontAwesome style={{fontSize: ICON_SIZE, color: isFavorited ? 'red' : colors.LIGHT_GRAY}}>{Icons.heart}</FontAwesome>
                 <ButtonText>
-                    3
+                    {favoriteCount}
                 </ButtonText>
             </Button>
         </Root>
