@@ -6,19 +6,28 @@ const Root = styled.View`
     flex: 1;
     justifyContent: center;
     alignItems: center;
-    backgroundColor: #f2f2f2;
 `;
 
 const T = styled.Text`
 
 `;
 
+const List = styled.ScrollView``;
+
 class HomeScreen extends Component {
     state = {};
     render() {
         return ( 
             <Root>
-                <FeedCard />
+                <List>
+                    <FeedCard />
+                    <FeedCard />
+                    <FeedCard />
+                    <FeedCard />
+                    <FeedCard />
+                    <FeedCard />
+                    <FeedCard />
+                </List>
             </Root>
         );
     }
